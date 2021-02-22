@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
 import BoardForm from '../components/BoardForm'
-import Boards from '../components/Boards'
+import Boards from '../components/Boards' 
 
-export class BoardContainer extends Component { 
+import {fetchBoards} from '../actions/fetchBoards'  
 
+
+
+export class BoardContainer extends Component {  
+
+
+
+componentDidMount(){
+    this.props.fetchBoards()
+    // console.log(this.props)
+}
 
     render() {
         return (
@@ -14,6 +25,14 @@ export class BoardContainer extends Component {
             </div>
         )
     }
+} 
+
+const mapStateToProps = state => {
+    return {
+        boards: state.boards
+    }
+
 }
 
-export default BoardContainer
+export default connect(mapStateToProps, {fetchBoards})(BoardContainer)
+ 
