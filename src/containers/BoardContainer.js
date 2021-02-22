@@ -21,7 +21,7 @@ componentDidMount(){
         return (
             <div>
                 <BoardForm/> 
-                <Boards/>
+                <Boards boards={this.props.boards}/>
             </div>
         )
     }

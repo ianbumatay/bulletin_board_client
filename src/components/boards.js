@@ -4,7 +4,8 @@ function Boards(props) {
 
     return (
         <div>
-            Boards
+            Boards 
+            {props.boards.map( board => <h2 key={board.id}>{board.name}</h2>)}
         </div>
     )
 }
