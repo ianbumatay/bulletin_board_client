@@ -1,4 +1,11 @@
 export const boardReducer = (state = {board: []}, action)  => {
 
-    return state
+    switch(action.type){
+        case 'FETCH_BOARDS':
+            return {boards: action.payload}
+
+
+        default: 
+         return state
+    } 
 }
