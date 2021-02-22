@@ -1,6 +1,6 @@
 import React from 'react'
 
-function board() {
+function Board() {
     return (
         <div>
             
@@ -8,5 +8,5 @@ function board() {
     )
 }
 
-export default board
+export default Board
 

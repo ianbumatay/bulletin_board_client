@@ -1,13 +1,19 @@
+
+
+
 import React, { Component } from 'react'
 
-export class boardInput extends Component {
+export class BoardForm extends Component {
+
+
+    
     render() {
         return (
             <div>
-                
+                BoardForm
             </div>
         )
     }
 }
 
-export default boardInput
+export default BoardForm

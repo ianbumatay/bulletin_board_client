@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 
-export class BoardContainer extends Component {
+import BoardForm from '../components/BoardForm'
+import Boards from '../components/Boards'
+
+export class BoardContainer extends Component { 
+
+
     render() {
         return (
             <div>
-                
+                <BoardForm/> 
+                <Boards/>
             </div>
         )
     }

@@ -1,11 +1,12 @@
 import React from 'react'
 
-function boards() {
+function Boards(props) { 
+
     return (
         <div>
-            
+            Boards
         </div>
     )
 }
 
-export default boards
+export default Boards
