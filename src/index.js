@@ -1,22 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {createStore, applyMiddleware} from 'redux';
-import Thunk from 'redux-thunk'
+import {createStore, applyMiddleware, compose} from 'redux';
+import thunk from 'redux-thunk'
 import {Provider} from 'react-redux'
 
-import {rootReducer} from './reducers/rootReducer'
-import {composeWithDevtools} from 'redux-devtools-extension'
+import {boardReducer} from './reducers/boardReducer'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 import App from './App'; 
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(Thunk)))
+const store = createStore(boardReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+  )
 
 
 
 
 ReactDOM.render(
-    <App />,
+  <Provider store={store}>
+     <App />
+  </Provider>,
   document.getElementById('root')
 );
 
