@@ -10,7 +10,13 @@ export class BoardForm extends Component {
     render() {
         return (
             <div>
-                BoardForm
+                <form>
+                    <label> Create boards </label>
+                    <input type="text" name="name" // value={this.state.name} 
+                    />
+                    <input type="submit"/>
+                </form>
+
             </div>
         )
     }
