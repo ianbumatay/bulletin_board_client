@@ -11,24 +11,29 @@ constructor(props) {
     super(props)
 
     this.state = {
-         name: " "
+         name: ''
     }
 }
 
 
  handleChange = event => {
-    this.setState({name: event.target.value})
+    this.setState({name: event.target.value}) 
 }
  
+
+handleSubmit = (event) => {
+    event.preventDefault() 
+    this.props.addBoard(this.state)
+}
+
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label> Create boards </label>
                     <input type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
                     <input type="submit"/>
                 </form>
-
             </div>
         )
     }
