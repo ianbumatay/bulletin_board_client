@@ -6,8 +6,8 @@ function Boards(props) {
 
     return (
         <div>
-            {props.boards.map( board => <Link to= {`/boards/ ${board.id}`}>{board.name}</Link>
-            // <h2 key={board.id}>  <Board board={board} /> </h2>
+            {props.boards.map( board => 
+             <h2 key={board.id}> <Link to= {`/boards/ ${board.id}`}>{board.name}</Link></h2>
             )}
         </div>
     )
