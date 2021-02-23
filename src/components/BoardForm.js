@@ -25,7 +25,10 @@ constructor(props) {
 
 handleSubmit = (event) => {
     event.preventDefault() 
-    this.props.addBoard(this.state)
+    this.props.addBoard(this.state) 
+    this.setState({
+        name: ''
+    })
 }
 
     render() {
