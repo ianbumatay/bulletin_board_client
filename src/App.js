@@ -2,7 +2,8 @@
 // import './App.css';
 
 import React, { Component } from 'react'
-import BoardContainer from './containers/BoardContainer'
+import BoardContainer from './containers/BoardContainer' 
+
 
 export class App extends Component { 
 

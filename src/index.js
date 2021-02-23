@@ -6,7 +6,9 @@ import thunk from 'redux-thunk'
 import {Provider} from 'react-redux'
 
 import {boardReducer} from './reducers/boardReducer'
-import { composeWithDevTools } from 'redux-devtools-extension'
+import { composeWithDevTools } from 'redux-devtools-extension' 
+
+import {BrowserRouter as Router} from 'react-router-dom'
 
 import App from './App'; 
 
@@ -18,9 +20,11 @@ const store = createStore(boardReducer,
 
 
 ReactDOM.render(
-  <Provider store={store}>
-     <App />
-  </Provider>,
+  <Router>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </Router>,
   document.getElementById('root')
 );
 
