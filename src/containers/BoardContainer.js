@@ -22,7 +22,7 @@ componentDidMount(){
         return (
             <div>
                 <Route path='/boards/new' component={BoardForm} /> 
-                <Boards boards={this.props.boards}/>
+                <Route exact path='/boards' render={(routerProps) => <Boards {...routerProps} boards={this.props.boards}/> } />
             </div>
         )
     }
