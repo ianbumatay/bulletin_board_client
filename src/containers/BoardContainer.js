@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
+import {connect} from 'react-redux' 
+import {Route, Switch} from 'react-router-dom'
 
 import BoardForm from '../components/BoardForm'
 import Boards from '../components/Boards' 
@@ -20,7 +21,7 @@ componentDidMount(){
     render() {
         return (
             <div>
-                <BoardForm/> 
+                <Route path='/boards/new' component={BoardForm} /> 
                 <Boards boards={this.props.boards}/>
             </div>
         )
