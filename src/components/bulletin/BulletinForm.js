@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
+import {addBulletin} from '../../actions/bulletinActions/addBulletin'
 
 export class BulletinForm extends Component {  
 
@@ -42,4 +44,4 @@ export class BulletinForm extends Component {
     }
 }
 
-export default BulletinForm
+export default connect(null,{addBulletin})(BulletinForm)

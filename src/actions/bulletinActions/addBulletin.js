@@ -12,6 +12,6 @@ export const  addBulletin = (data) => {
         }
         fetch('http://localhost:3000/api/v1/boards/bulletins', options) 
         .then(res => res.json())
-        .then(board => dispatch({type: "ADD_Bulletin", payload: board}))    
+        .then(board => dispatch({type: "ADD_BULLETIN", payload: board}))    
     }
 } 
