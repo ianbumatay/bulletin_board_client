@@ -7,7 +7,7 @@ import Boards from '../components/board/Boards'
 import Board from '../components/board/Board' 
 
 
-import {fetchBoards} from '../actions/fetchBoards'  
+import {fetchBoards} from '../actions/boardActions/fetchBoards'  
 
 
 

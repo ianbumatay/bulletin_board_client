@@ -13,6 +13,11 @@ export class BulletinForm extends Component {
 
      handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value})
+    } 
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addBulletin(this.state)
     }
 
 
@@ -23,7 +28,7 @@ export class BulletinForm extends Component {
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label><h2>Bulletins:</h2></label> 
                     <label><h4>Title:</h4></label>
                     <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/> 
