@@ -1,5 +1,5 @@
 export const  addBulletin = (data) => {
-    debugger
+    //debugger
     return(dispatch) => {
         
         const options = {
@@ -10,7 +10,7 @@ export const  addBulletin = (data) => {
             }, 
             body: JSON.stringify(data)
         }
-        fetch('http://localhost:3000/api/v1/boards/bulletins', options) 
+        fetch('http://localhost:3000/api/v1/boards/1/bulletins', options) 
         .then(res => res.json())
         .then(board => dispatch({type: "ADD_BULLETIN", payload: board}))    
     }
