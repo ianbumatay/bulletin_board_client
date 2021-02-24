@@ -19,7 +19,7 @@ export class BulletinForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addBulletin(this.state)
+        this.props.addBulletin(this.state, this.props.boardId)
     }
 
 

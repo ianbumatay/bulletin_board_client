@@ -5,7 +5,20 @@ export const boardReducer = (state = {boards: []}, action)  => {
             return {boards: action.payload}
 
         case 'ADD_BOARD': 
-            return{...state, boards: [...state.boards, action.payload]}
+            return{...state, boards: [...state.boards, action.payload]} 
+
+        case 'ADD_BULLETIN': 
+
+            let boards = state.boards.map(board => {
+                if(board.id === action.payload.id){
+                    return action.payload
+                } else {
+                    return board
+                }
+            })
+
+            return {...state, boards: boards}
+
 
 
         default: 
