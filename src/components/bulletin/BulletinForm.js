@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 
-export class BulletinContainer extends Component {
+export class BulletinForm extends Component {
     render() {
         return (
             <div>
-                BulletinForm 
-    
+                
             </div>
         )
     }
 }
 
-export default BulletinContainer
+export default BulletinForm

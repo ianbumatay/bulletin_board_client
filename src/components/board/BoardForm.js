@@ -3,7 +3,7 @@
 
 import React, { Component } from 'react' 
 import {connect} from 'react-redux' 
-import {addBoard} from '../actions/addBoard'
+import {addBoard} from '../../actions/addBoard'
 
 
 export class BoardForm extends Component {

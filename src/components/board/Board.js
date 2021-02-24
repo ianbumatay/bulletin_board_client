@@ -1,4 +1,5 @@
 import React from 'react'
+import BulletinContainer from '../../containers/BulletinContainer'
 
 function Board( props) {
 
@@ -7,6 +8,7 @@ function Board( props) {
     return (
         <div>
           <h2> { board ? board.name : null }</h2><button>Delete</button>
+          <BulletinContainer/>
         </div>
     )
 }

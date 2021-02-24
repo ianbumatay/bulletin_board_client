@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux' 
 import {Route, Switch} from 'react-router-dom'
 
-import BoardForm from '../components/BoardForm'
-import Boards from '../components/Boards' 
-import Board from '../components/Board' 
+import BoardForm from '../components/board/BoardForm'
+import Boards from '../components/board/Boards' 
+import Board from '../components/board/Board' 
 
 
 import {fetchBoards} from '../actions/fetchBoards'  
