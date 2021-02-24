@@ -8,7 +8,7 @@ export class BulletinContainer extends Component {
         return (
             <div>
                 <BulletinForm/> 
-                <Bulletins/>
+                <Bulletins bulletins={this.props.board && this.props.board.bulletins}/>
             </div>
         )
     }
