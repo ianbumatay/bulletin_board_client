@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import BulletinForm from '../components/bulletin/BulletinForm'
+import BulletinForm from '../components/bulletin/BulletinForm' 
+import Bulletins from '../components/bulletin/Bulletins'
 
 
 export class BulletinContainer extends Component {
@@ -7,7 +8,7 @@ export class BulletinContainer extends Component {
         return (
             <div>
                 <BulletinForm/> 
-    
+                <Bulletins/>
             </div>
         )
     }

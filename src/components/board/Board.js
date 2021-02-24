@@ -8,7 +8,7 @@ function Board( props) {
     return (
         <div>
           <h2> { board ? board.name : null }</h2><button>Delete</button>
-          <BulletinContainer/>
+          <BulletinContainer board={board}/>
         </div>
     )
 }

@@ -5,7 +5,7 @@ export const bulletinReducer = (state = {bulletins: []}, action)  => {
         //     return {bulletins: action.payload}
 
         case 'ADD_BULLETIN': 
-            return{...state, boards: [...state.boards, action.payload]}
+            return{...state, bulletins: [...state.bulletins, action.payload]}
 
 
         default: 
