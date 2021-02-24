@@ -23,9 +23,11 @@ componentDidMount(){
     render() {
         return (
             <div>
-                <Route path='/boards/new' component={BoardForm} /> 
-                <Route path='/boards/:id' render={(routerProps) => <Board {...routerProps} boards={this.props.boards}/> }/>
-                <Route exact path='/boards' render={(routerProps) => <Boards {...routerProps} boards={this.props.boards}/> } />
+                <Switch>
+                    <Route path='/boards/new' component={BoardForm}/> 
+                    <Route path='/boards/:id' render={(routerProps) => <Board {...routerProps} boards={this.props.boards}/>}/>
+                    <Route exact path='/boards' render={(routerProps) => <Boards {...routerProps} boards={this.props.boards}/>}/>
+                </Switch>
             </div>
         )
     }
