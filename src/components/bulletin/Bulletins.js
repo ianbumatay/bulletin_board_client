@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Bulletins() {
+function Bulletins(props) {
     return (
         <div>
-            {props.bulletins.map( bulletin => 
+            {props.bulletins && props.bulletins.map( bulletin => 
                 <li key={bulletin.id}>{bulletin.title} - {bulletin.content}</li>)}
         </div>
     )
