@@ -1,6 +1,9 @@
 import React from 'react'
 
-function Bulletins(props) {
+function Bulletins(props) { 
+
+    console.log(props)
+
     return (
         <div>
             {props.bulletins && props.bulletins.map( bulletin => 

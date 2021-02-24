@@ -1,4 +1,4 @@
-export const  addBulletin = (data) => {
+export const  addBulletin = (bulletin, boardId) => {
     //debugger
     return(dispatch) => {
         
@@ -8,9 +8,9 @@ export const  addBulletin = (data) => {
                 "Content-type": "application/json", 
                 "accept": "application/json"
             }, 
-            body: JSON.stringify(data)
+            body: JSON.stringify(bulletin)
         }
-        fetch('http://localhost:3000/api/v1/boards/1/bulletins', options) 
+        fetch(`http://localhost:3000/api/v1/boards/${boardId}/bulletins`, options) 
         .then(res => res.json())
         .then(board => dispatch({type: "ADD_BULLETIN", payload: board}))    
     }
