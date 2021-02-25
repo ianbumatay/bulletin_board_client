@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react'
 import BoardContainer from './containers/BoardContainer' 
+import NavBar from './components/NavBar'
 
 
 export class App extends Component { 
@@ -20,6 +21,7 @@ export class App extends Component {
   render() {
     return (
       <div>
+        <NavBar/>
         <BoardContainer/>
       </div>
     )
