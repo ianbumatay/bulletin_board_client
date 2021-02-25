@@ -1,4 +1,5 @@
 export const boardReducer = (state = {boards: []}, action)  => { 
+    //debugger
 
     switch(action.type){
         case 'FETCH_BOARDS':
@@ -8,6 +9,8 @@ export const boardReducer = (state = {boards: []}, action)  => {
             return{...state, boards: [...state.boards, action.payload]} 
 
         case 'ADD_BULLETIN': 
+
+        //return {}
 
             let boards = state.boards.map(board => {
                 if(board.id === action.payload.id){
