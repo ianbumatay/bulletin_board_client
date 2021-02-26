@@ -6,11 +6,14 @@ export const boardReducer = (state = {boards: []}, action)  => {
             return {boards: action.payload}
 
         case 'ADD_BOARD': 
-            return{...state, boards: [...state.boards, action.payload]} 
+            return {...state, boards: [...state.boards, action.payload]} 
+
+        case 'DELETE_BOARD': 
+             const newBoard = state.boards.filter(board => board.id !== action.payload)
+
+             return {boards: newBoard}
 
         case 'ADD_BULLETIN': 
-
-        //return {}
 
             let boards = state.boards.map(board => {
                 if(board.id === action.payload.id){
@@ -28,3 +31,5 @@ export const boardReducer = (state = {boards: []}, action)  => {
          return state
     } 
 }
+
+
