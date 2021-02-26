@@ -3,7 +3,8 @@
 
 import React, { Component } from 'react' 
 import {connect} from 'react-redux' 
-import {addBoard} from '../../actions/boardActions/addBoard'
+import {addBoard} from '../../actions/boardActions/addBoard' 
+import {withRouter} from 'react-router-dom'
 
 
 export class BoardForm extends Component {
@@ -26,9 +27,8 @@ constructor(props) {
 handleSubmit = (event) => {
     event.preventDefault() 
     this.props.addBoard(this.state) 
-    this.setState({
-        name: ''
-    })
+    this.setState({ name: '' })
+    this.props.history.push('/boards')
 }
 
     render() {
@@ -44,4 +44,4 @@ handleSubmit = (event) => {
     }
 }
 
-export default connect(null, {addBoard})(BoardForm)
+export default withRouter(connect(null, {addBoard})(BoardForm))
