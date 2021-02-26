@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux' 
+import {deleteBoard} from '../../actions/boardActions/deleteBoard' 
 import BulletinContainer from '../../containers/BulletinContainer'
 
 function Board(props) { 
@@ -21,5 +23,5 @@ function Board(props) {
     )
 }
 
-export default Board
+export default connect(null, {deleteBoard})(Board)
 
