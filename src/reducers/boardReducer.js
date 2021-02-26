@@ -1,5 +1,5 @@
 export const boardReducer = (state = {boards: []}, action)  => { 
-    //debugger
+ 
 
     switch(action.type){
         case 'FETCH_BOARDS':

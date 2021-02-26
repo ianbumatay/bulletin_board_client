@@ -2,7 +2,7 @@ import React from 'react'
 
 function Bulletins(props) { 
 
-    console.log(props.bulletins)
+    //console.log(props.bulletins)
 
     return (
         <div>
