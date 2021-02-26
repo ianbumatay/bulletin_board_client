@@ -7,11 +7,15 @@ function Board(props) {
 
   let board = props.boards.filter(board => board.id == props.match.params.id)[0]
 
-    //let board = props.boards[props.match.params.id - 1]
+    //let board = props.boards[props.match.params.id - 1] 
+
+    const handleDelete = () => {
+      props.deleteList(props.board.id)
+    }
 
     return (
         <div>
-          <h2> { board ? board.name : null }</h2><button>Delete</button>
+          <h2> { board ? board.name : null } <button onClick={handleDelete}>Delete</button> </h2>
           <BulletinContainer board={board}/>
         </div>
     )
