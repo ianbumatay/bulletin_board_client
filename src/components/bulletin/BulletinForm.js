@@ -33,12 +33,10 @@ export class BulletinForm extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <br></br>
-                    <label><h4>Latest:</h4></label> 
                     Tiltle: <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/> 
                     Content: <input type="text" name="content"  value={this.state.content} onChange={this.handleChange}/>
                     <input type="submit"/>
                 </form>
-                
             </div>
         )
     }

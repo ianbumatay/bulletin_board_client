@@ -6,13 +6,12 @@ import {Route, Link} from 'react-router-dom'
 function Boards(props) { 
 
     const boardstyle = {
-        width: '200px', 
-        padding: '40px',
-        margin: '0 20px 20px',
+        width: '400px', 
+        padding: '10px',
+        margin: '0 6px 6px',
         background: '', 
         textDecoration: 'none',
-        color:'white',
-        border: '1px soloid'
+        color:'white'
     }
 
     return (
