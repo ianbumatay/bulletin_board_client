@@ -11,6 +11,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import {BrowserRouter as Router} from 'react-router-dom'
 
 import App from './App'; 
+import './index.css'
 
 const store = createStore(boardReducer,
   composeWithDevTools(applyMiddleware(thunk))

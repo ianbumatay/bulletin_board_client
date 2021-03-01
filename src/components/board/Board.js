@@ -15,7 +15,6 @@ function Board(props) {
     //let board = props.boards[props.match.params.id - 1] 
 
     const handleDelete = () => {
-    
       props.deleteBoard(props.board.id)
       props.history.push('/boards')
     }

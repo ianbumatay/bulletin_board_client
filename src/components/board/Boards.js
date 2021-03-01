@@ -7,18 +7,18 @@ function Boards(props) {
 
     const boardstyle = {
         width: '200px', 
-        padding: '20px',
-        margin: '0 12px 12px',
+        padding: '40px',
+        margin: '0 20px 20px',
         background: '', 
         textDecoration: 'none',
         color:'white',
-      
+        border: '1px soloid'
     }
 
     return (
         <div className="boardDiv">
             {props.boards.map( board => 
-            <h2 style={boardstyle} key={board.id}><Link to={`/boards/${board.id}`}>{board.name}</Link></h2>)}
+            <h2  style={boardstyle} key={board.id}><Link to={`/boards/${board.id}`}>{board.name}</Link></h2>)}
         </div>
     )
 }

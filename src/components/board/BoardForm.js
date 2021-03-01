@@ -35,8 +35,10 @@ handleSubmit = (event) => {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label> Create boards </label>
-                    <input type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
+                    <br></br>
+                    <br></br>
+                    <label> <span>Create boards</span></label>
+                    <input type="text" name="name" style={{}} onChange={this.handleChange} value={this.state.name}/>
                     <input type="submit"/>
                 </form>
             </div>

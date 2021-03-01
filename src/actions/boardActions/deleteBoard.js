@@ -1,20 +1,5 @@
 
 
-// export const  deleteBoard = (boardId) => {
-
-//     return (dispatch) => {
-
-//         const options = {
-//             method: "DELETE"
-//         }
-
-//         fetch(`http://localhost:3000/api/v1/boards/${boardId}`,options)
-//         //.then(res => res.json())
-//         .then(board => {
-//             dispatch({type: "DELETE_BOARD", payload: boardId})
-//         })
-//     }
-// }  
 
 export const deleteBoard = (boardId) => {
     return (dispatch) => {

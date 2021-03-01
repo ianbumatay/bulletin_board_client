@@ -1,9 +1,10 @@
 
-import './App.css';
+//import './App.css';
 
 import React, { Component } from 'react'
 import BoardContainer from './containers/BoardContainer' 
 import NavBar from './components/NavBar'
+import Home from './components/Home'
 
 
 export class App extends Component { 
@@ -22,6 +23,7 @@ export class App extends Component {
     return (
       <div>
         <NavBar/>
+        <Home/>
         <BoardContainer/>
       </div>
     )

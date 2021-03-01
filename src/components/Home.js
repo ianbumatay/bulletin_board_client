@@ -1,10 +1,16 @@
 import React from 'react'
+import '../Home.css'
 
 function Home() {
+
+    
+
+
     return (
+
         <div>
             <div className="home">
-              Home Page
+             <h1 id="home">Bulletin Board </h1>
             </div>
             
         </div>

@@ -32,11 +32,10 @@ export class BulletinForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label><h2>Bulletins:</h2></label> 
-                    <label><h4>Title:</h4></label>
-                    <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/> 
-                    <label><h4>content:</h4></label>
-                    <input type="text" name="content"  value={this.state.content} onChange={this.handleChange}/>
+                    <br></br>
+                    <label><h4>Latest:</h4></label> 
+                    Tiltle: <input type="text" name="title" value={this.state.title} onChange={this.handleChange}/> 
+                    Content: <input type="text" name="content"  value={this.state.content} onChange={this.handleChange}/>
                     <input type="submit"/>
                 </form>
                 
