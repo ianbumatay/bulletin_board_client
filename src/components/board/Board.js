@@ -20,8 +20,8 @@ function Board(props) {
     }
 
     return (
-        <div>
-          <h2> { props.board ? props.board.name : null } <button onClick={handleDelete}>Delete</button> </h2>
+        <div> 
+          <h2 className="boards"> { props.board ? props.board.name : null } <button onClick={handleDelete}>Delete</button> </h2>
           <BulletinContainer board={props.board}/>
         </div>
     )

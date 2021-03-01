@@ -23,7 +23,7 @@ export class App extends Component {
     return (
       <div>
         <NavBar/>
-        <Home/>
+         <Home/>
         <BoardContainer/>
       </div>
     )

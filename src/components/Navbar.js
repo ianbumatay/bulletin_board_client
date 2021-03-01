@@ -11,18 +11,24 @@ const link = {
     width: '100px', 
     padding: '12px',
     margin: '0 6px 6px',
-    background: 'black', 
     textDecoration: 'none',
-    color:'white'
+    color:'white',
+   
 }
 
     return (
         <div className="navBar">
-            <NavLink to="/" exact style={link}>Home</NavLink>
-            <NavLink to="/boards/new" exact  style={link} >Create</NavLink>
-            <NavLink to="/boards" exact style={link}>Boards</NavLink>
+            <NavLink className="nav-home" to="/" exact style={link}>Home</NavLink>
+            <NavLink className="nav-new" to="/boards/new" exact  style={link} >Create</NavLink>
+            <NavLink className="nav-boards" to="/boards" exact style={link}>Boards</NavLink>
         </div>
     )
 }
 
 export default NavBar
+
+{/* <div className="navBar">
+            <NavLink to="/" exact style={link}>Home</NavLink>
+            <NavLink to="/boards/new" exact  style={link} >Create</NavLink>
+            <NavLink to="/boards" exact style={link}>Boards</NavLink>
+        </div> */}
