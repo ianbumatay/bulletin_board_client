@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {deleteBulletin} from '../../actions/bulletinActions/deleteBulletin'
 
 function Bulletins(props) { 
 
@@ -7,7 +9,7 @@ console.log(props.bulletins)
 
 const handleDelete = (bulletin) => {
     //debugger
-
+  props.deleteBulletin(bulletin.id, bulletin.board_id)
 }
 
     return (
@@ -20,4 +22,4 @@ const handleDelete = (bulletin) => {
     )
 }
 
-export default Bulletins
+export default connect(null, {deleteBulletin})(Bulletins)
