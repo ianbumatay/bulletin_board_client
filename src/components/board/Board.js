@@ -6,9 +6,9 @@ import {withRouter} from 'react-router-dom'
 
 function Board(props) { 
 
-  console.log(props.board)
+  //console.log(props.board)
 
-  console.log(props)
+  //console.log(props)
 
   //let board = props.boards.filter(board => board.id == props.match.params.id)[0]
 
