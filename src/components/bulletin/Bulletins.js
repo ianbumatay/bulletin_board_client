@@ -14,7 +14,7 @@ const handleDelete = (bulletin) => {
     
         <div>
             {props.bulletins && props.bulletins.map( bulletin => <div className="color-row" key={bulletin.id} > <h4 key={bulletin.id}> {bulletin.title}</h4> 
-            <p>{bulletin.content} </p> <button onClick={() =>handleDelete(bulletin)} >X</button></div>) }
+            <p>{bulletin.content} </p> <button onClick={() => handleDelete(bulletin)} >X</button></div>) }
         </div>
         
     )
