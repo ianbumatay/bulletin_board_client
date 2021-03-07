@@ -6,15 +6,7 @@ import {withRouter} from 'react-router-dom'
 
 function Board(props) { 
 
-  //console.log(props.board)
-
-  //console.log(props)
-
-  //let board = props.boards.filter(board => board.id == props.match.params.id)[0]
-
-    //let board = props.boards[props.match.params.id - 1] 
-
-    const handleDelete = () => {
+   const handleDelete = () => {
       props.deleteBoard(props.board.id)
       props.history.push('/boards')
     }

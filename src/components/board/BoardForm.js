@@ -1,6 +1,4 @@
 
-
-
 import React, { Component } from 'react' 
 import {connect} from 'react-redux' 
 import {addBoard} from '../../actions/boardActions/addBoard' 
@@ -9,10 +7,8 @@ import {withRouter} from 'react-router-dom'
 
 export class BoardForm extends Component {
 
-
-constructor(props) {
-    super(props)
-
+constructor() {
+    super()
     this.state = {
          name: ''
     }
@@ -38,7 +34,7 @@ handleSubmit = (event) => {
                     <br></br>
                     <br></br>
                     <label> <span>Create boards</span></label>
-                    <input type="text" name="name" style={{}} onChange={this.handleChange} value={this.state.name}/>
+                    <input type="text" name="name" onChange={this.handleChange} value={this.state.name}/>
                     <input type="submit"/>
                 </form>
             </div>

@@ -4,16 +4,15 @@ import {addBulletin} from '../../actions/bulletinActions/addBulletin'
 
 export class BulletinForm extends Component {  
 
-    constructor(props) {
-        super(props)
-    
+    constructor() {
+        super()
         this.state = {
              title: '',
              content: ''
         }
     }  
 
-     handleChange = (event) => {
+    handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value})
     } 
 
@@ -25,8 +24,6 @@ export class BulletinForm extends Component {
              content: ''
         })
     }
-
-
 
     render() {
         return (

@@ -1,5 +1,5 @@
 export const  addBoard = (data) => {
-    //debugger
+    
     return(dispatch) => {
         
         const options = {

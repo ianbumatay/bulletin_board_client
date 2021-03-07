@@ -5,19 +5,14 @@ import {Route, Switch} from 'react-router-dom'
 import BoardForm from '../components/board/BoardForm'
 import Boards from '../components/board/Boards' 
 import Board from '../components/board/Board' 
-
-
 import {fetchBoards} from '../actions/boardActions/fetchBoards'  
-
 
 
 export class BoardContainer extends Component {  
 
-
-
 componentDidMount(){
     this.props.fetchBoards()
-    // console.log(this.props)
+
 }
 
     render() {
@@ -25,8 +20,7 @@ componentDidMount(){
             <div>
                 <Switch>
                     <Route path='/boards/new' component={BoardForm}/> 
-                    <Route exact path="/boards/:id" render={((routerProps) => <Board board={this.props.boards.find(board => board.id === parseInt(routerProps.match.params.id))} /> ) }/>
-                    {/* <Route path='/boards/:id' render={(routerProps) => <Board {...routerProps} boards={this.props.boards}/>}/> */}
+                    <Route exact path="/boards/:id" render={((routerProps) => <Board board={this.props.boards.find(board => board.id === parseInt(routerProps.match.params.id))} /> ) }/> 
                     <Route exact path='/boards' render={(routerProps) => <Boards {...routerProps} boards={this.props.boards}/>}/>
                 </Switch>
             </div>
