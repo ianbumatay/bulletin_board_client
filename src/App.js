@@ -10,8 +10,8 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <NavBar/>
-         <Home/>
+        <NavBar/> 
+        <Home/>
         <BoardContainer/>
       </div>
     )
