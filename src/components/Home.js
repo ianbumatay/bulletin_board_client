@@ -7,7 +7,7 @@ function Home() {
 
         <div>
             <div className="home">
-             <h1 id="home">Bulletin Board </h1>
+             <h2 id="home">Bulletin Board </h2>
             </div>
             
         </div>

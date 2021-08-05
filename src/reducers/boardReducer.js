@@ -1,4 +1,4 @@
-export const boardReducer = (state = {boards: []}, action)  => { 
+export const boardReducer = ( state = {boards: []}, action )  => { 
  
 
     switch(action.type){

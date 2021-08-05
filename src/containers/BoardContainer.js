@@ -8,18 +8,19 @@ import Board from '../components/board/Board'
 import {fetchBoards} from '../actions/boardActions/fetchBoards'  
 
 
+
 export class BoardContainer extends Component {  
 
 componentDidMount(){
     this.props.fetchBoards()
-
 }
 
     render() {
         return (
             <div>
                 <Switch>
-                    <Route path='/boards/new' component={BoardForm}/> 
+                 
+                    <Route exact path='/boards/new' component={BoardForm}/> 
                     <Route exact path="/boards/:id" render={((routerProps) => <Board board={this.props.boards.find(board => board.id === parseInt(routerProps.match.params.id))} /> ) }/> 
                     <Route exact path='/boards' render={(routerProps) => <Boards {...routerProps} boards={this.props.boards}/>}/>
                 </Switch>
@@ -30,7 +31,7 @@ componentDidMount(){
 
 const mapStateToProps = state => {
     return {
-        boards: state.boards
+         boards: state.boards
     }
 
 }
